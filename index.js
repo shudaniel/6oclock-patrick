@@ -53,7 +53,7 @@ async function run()
         if(checkTime())
         {
           writeTweet()
-          await sleep(3660000);  // Wait 61 minutes
+          await sleep(81000000);  // Wait 22.5 hours 
         }
         else
         {
