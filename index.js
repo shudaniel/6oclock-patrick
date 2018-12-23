@@ -62,6 +62,5 @@ async function run()
       
   }
 }
-writeTweet()
 run()
 
