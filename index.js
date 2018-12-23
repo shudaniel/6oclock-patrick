@@ -10,7 +10,16 @@ var T = new Twit({
 
 var b64content = fs.readFileSync('./6oclock.gif', { encoding: 'base64' })
 
-var writeTweet = function() {
+function checkTime() 
+{
+    var d = new Date(); // current time
+    var hours = d.getHours();
+
+    return hours == 18 
+}
+
+var writeTweet = function() 
+{
     T.post('media/upload', { media_data: b64content }, function (err, data, response) {
       // now we can assign alt text to the media, for use by screen readers and
       // other text-based presentations and interpreters
@@ -31,4 +40,27 @@ var writeTweet = function() {
     })
 }
 
-writeTweet()
+function sleep(ms) 
+{
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function run() 
+{
+  while(true)
+  {
+      if(checkTime())
+      {
+          writeTweet()
+          await sleep(3660000);
+      }
+      else
+      {
+          await sleep(60000);
+      }
+      
+  }
+}
+
+run()
+
