@@ -56,11 +56,12 @@ async function run()
       }
       else
       {
+
           await sleep(60000);
       }
       
   }
 }
-
+writeTweet()
 run()
 
