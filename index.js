@@ -47,20 +47,28 @@ function sleep(ms)
 
 async function run() 
 {
-  while(true)
-  {
-      if(checkTime())
-      {
+    writeTweet()
+    await sleep(600000)
+    writeTweet()
+    await sleep(600000)
+    writeTweet()
+    
+
+    while(true)
+    {  
+        if(checkTime())
+        {
           writeTweet()
           await sleep(3660000);
-      }
-      else
-      {
+        }
+        else
+        {
 
           await sleep(60000);
-      }
+        }
       
-  }
+    }
 }
+
 run()
 
