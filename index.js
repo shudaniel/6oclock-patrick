@@ -1,10 +1,10 @@
 const fs = require('fs');
 var Twit = require('twit')
 var T = new Twit({
-    consumer_key:         'huEBqMY9jrxj5d2UaOWB68GvX',
-    consumer_secret:      'RdrNZ7OZ8QL3RVsAvqGP3NhYUGZdIms9Kd63UO3usHZQP4wjgU',
-    access_token:         '764528086511517696-4IFdcONcqvjEldGPsMAptVmmMT0N1vk',
-    access_token_secret:  'qbvmCD7P1T7PZyI9hMIAl71vIIJzbsjsuBb3Gaojl13Oq',
+    consumer_key:         process.env.CONSUMER_KEY,
+    consumer_secret:      process.env.CONSUMER_SECRET,
+    access_token:         process.env.ACCESS_TOKEN,
+    access_token_secret:  process.env.ACCESS_SECRET,
 })
 
 var b64content = fs.readFileSync('./6oclock.gif', { encoding: 'base64' })
