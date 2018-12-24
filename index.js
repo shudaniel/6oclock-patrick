@@ -47,8 +47,6 @@ function sleep(ms)
 
 async function run() 
 {
-  writeTweet()
-
     while(true)
     {  
         if(checkTime())
