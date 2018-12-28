@@ -30,7 +30,7 @@ var writeTweet = function()
       T.post('media/metadata/create', meta_params, function (err, data, response) {
         if (!err) {
           // now we can reference the media and post a tweet (media will attach to the tweet)
-          var params = { status: 'Time for Patrick to come home and change Junior\'s diaper. #spongebob #patrick #rockabyebivalve', media_ids: [mediaIdStr] }
+          var params = { status: 'Time for Patrick to come home and change Junior\'s diaper. #spongebob #patrick #rockabyebivalve #6oclock', media_ids: [mediaIdStr] }
 
           T.post('statuses/update', params, function (err, data, response) {
             console.log(data)
