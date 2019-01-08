@@ -14,8 +14,9 @@ function checkTime()
 {
     var d = new Date(); // current time
     var hours = d.getHours();
+    var minutes = d.getMinutes();
 
-    return (hours == 18) 
+    return (hours == 18 && minutes == 0) 
 }
 
 var writeTweet = function() 
