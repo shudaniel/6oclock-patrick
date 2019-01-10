@@ -57,7 +57,7 @@ async function run()
         }
         else
         {
-          await sleep(60000); // Wait 1 min
+          await sleep(30000); // Wait 30 sec and check again
         }
       
     }
